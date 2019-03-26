@@ -2,13 +2,17 @@
   "name": "10-millon-dollar-logo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://eugenioclrc.github.io/10-millon-dollar-logo/",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && cp -R dist/* docs/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "gh-pages": "^2.0.1",
     "html2canvas": "^1.0.0-alpha.12",
     "vue": "^2.6.6",
     "vue-color": "^2.7.0"
